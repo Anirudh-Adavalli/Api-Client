@@ -1,0 +1,24 @@
+
+<div class="container">
+  <ag-navbar alignment="horizantal" [selectedButtonId]="selectedButtonId">
+    <ag-navbar-btn-group location="start">
+        <ag-navbar-btn buttonId="home" icon="awf-home" text="Home" tooltipContent="Home" tooltipPlacement="left"></ag-navbar-btn>
+        <ag-navbar-btn buttonId="list" icon="awf-list" text="List" tooltipContent="List"></ag-navbar-btn>
+        <ag-navbar-btn buttonId="notification" icon="awf-notifications" text="Notifications" tooltipContent="Notifications"></ag-navbar-btn>
+        <ag-navbar-btn buttonId="search" icon="awf-search" text="Search" tooltipContent="Search" tooltipPlacement="right"></ag-navbar-btn>
+    </ag-navbar-btn-group>
+    <ag-navbar-btn-group location="end" separator="start">
+        <ag-navbar-btn buttonId="locker" icon="awf-locker" tooltipContent="Lock session" tooltipPlacement="top"></ag-navbar-btn>
+        <ag-navbar-btn buttonId="user" icon="awf-user-outline" tooltipContent="User profile" tooltipPlacement="bottom"></ag-navbar-btn>
+    </ag-navbar-btn-group>
+  </ag-navbar> 
+
+  <div class="container mt-5 px-0">
+    <ag-button routerLink="/analysisMethods" class="rounded ml-1 btn px-0"  tooltipContent = "Click to create sequence" tooltipPlacement="right" type="primary" [dark]="true" [disabled]="disabled" value = "Create new Sequence"> </ag-button>
+  </div>
+</div>
+  
+
+<router-outlet></router-outlet>
+
+  

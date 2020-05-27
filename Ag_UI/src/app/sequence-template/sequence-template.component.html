@@ -1,0 +1,35 @@
+<div class="container">
+    <table class="ag-table">
+        <thead>
+            <tr>
+                <th><span class="ag-table-header">Sample Type</span></th>
+                <th><span class="ag-table-header">Acq. Method</span></th>
+                <th><span class="ag-table-header">Sample Amount</span></th>
+                <th><span class="ag-table-header">Sample Name</span></th>
+                <th><span class="ag-table-header">Location</span></th>
+                <th><span class="ag-table-header">Barcode</span></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let row of rowItems">
+                <td><span class = "ag-table-text">{{row.sampleType}}</span></td>
+                <td><span class = "ag-table-text">Acq. Methode-1</span></td>
+                <td><span class = "ag-table-text">10 ml</span></td>
+                <td><span class = "ag-table-text">{{row.sampleName}}</span></td>
+                <td><span class = "ag-table-text">{{row.Location}}</span></td>
+                <td><span class = "ag-table-text">{{row.Barcode}}</span></td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <ag-button class="mr-1 mt-2 float-right" (click) = "addRow();" tooltipContent = "Click" tooltipPlacement="right" [dark]="true" value="Next"></ag-button>
+</div>
+
+<div>
+    <ul *ngFor = "let x of currentScan">
+        <li>{{x.column}}</li>
+    </ul>
+</div>
+
